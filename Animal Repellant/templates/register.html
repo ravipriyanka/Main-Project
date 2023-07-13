@@ -1,0 +1,466 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Animal Repellent</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="../static/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/themify-icons.css">
+    <link rel="stylesheet" href="../static/css/nice-select.css">
+    <link rel="stylesheet" href="../static/css/flaticon.css">
+    <link rel="stylesheet" href="../static/css/gijgo.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" href="../static/css/slicknav.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+	
+	<script src="../static/js/jquery-3.5.1.min.js"></script>
+<script language="javascript">
+function validate()
+{
+	if(document.form1.mobile.value=="")
+	{
+	return false;
+	}
+	if(document.form1.mobile.value.length!=10)
+	{
+	return false;
+	}
+	if(isNaN(document.form1.mobile.value))
+	{
+	return false;
+	}
+	
+	if(document.form1.pass.value=="")
+	{
+	return false;
+	}
+	if(document.form1.pass.value!=document.form1.confpassword.value)
+	{
+	return false;
+	}
+return true;
+}
+</script>
+<script>
+function check()
+{
+
+    var mobile = document.getElementById('mobile');
+   
+    
+    var message = document.getElementById('message');
+
+   var goodColor = "#0C6";
+    var badColor = "#FF9B37";
+  
+    if(mobile.value.length!=10){
+       
+        mobile.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "required 10 digits, match requested format!"
+    }
+	else
+	{
+	 message.style.color = goodColor;
+	}
+	}
+</script>	 
+		 
+<script>
+$(document).ready(function () {
+   $("#ConfirmPassword").on('keyup', function(){
+    var password = $("#Password").val();
+    var confirmPassword = $("#ConfirmPassword").val();
+    if (password != confirmPassword)
+        $("#CheckPasswordMatch").html("Password does not match !").css("color","red");
+		
+    else
+        $("#CheckPasswordMatch").html("Password match !").css("color","green");
+		
+   });
+});
+</script>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                            <div class="short_contact_list">
+                                <ul>
+                                    <li><a href="#"> <i class="fa fa-phone"></i> +1 (454) 556-5656</a></li>
+                                    <li><a href="#"> <i class="fa fa-envelope"></i>info@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                            <div class="social_media_links d-none d-lg-block">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-pinterest-p"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="/">home</a></li>
+                                        <li><a href="/login_farmer">Farmer</a></li>
+										<li><a href="/login">Admin</a></li>
+                                        <!--<li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html">blog</a></li>
+                                                <li><a href="single-blog.html">single-blog</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="elements.html">elements</a></li>
+                                                <li><a href="Cause.html">Cause</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>-->
+                                    </ul>
+                                </nav>
+                                <div class="Appointment">
+                                    <!--<div class="book_btn d-none d-lg-block">
+                                        <a data-scroll-nav='1' href="#">Make a Donate</a>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Animal Repellent</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+
+
+    <!--================Blog Area =================-->
+    <section class="blog_area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="blog_left_sidebar">
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+							<h2>Animal Repellent</h2>
+                                <img class="card-img rounded-0" src="../static/img/mg2.jpg" alt="">
+								
+                               <!-- <a href="#" class="blog_item_date">
+                                    <h3>15</h3>
+                                    <p>Jan</p>
+                                </a>-->
+                            </div>
+
+                            <div class="blog_details">
+							
+							
+                                <!--<a class="d-inline-block" href="single-blog.html">
+                                    <h2>Google inks pact for new 35-storey office</h2>
+                                </a>
+                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
+                                    he earth it first without heaven in place seed it second morning saying.</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                </ul>-->
+                            </div>
+                        </article>
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget search_widget">
+                            <form name="form1" action="" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+								 <h3> Registration </h3>
+                                    <div>
+									
+                              <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Name" name="name" required="">
+                            </div>
+                            <div class="form-group">
+                             <input name="mobile" id="mobile" class="form-control" type="text" maxlength="10" onKeyUp="check()" placeholder="Mobile No." autofocus="" required><span id="message"></span>
+                            </div>
+                            <div class="form-group">
+                            <input name="email" type="email" class="form-control" placeholder="E-mail" required="">
+                            </div>
+							<div class="form-group">
+                              <input type="text" class="form-control" placeholder="Location" name="location" required="">
+                            </div>
+							<div class="form-group">
+                              <input type="text" class="form-control" placeholder="Username" name="uname" required="">
+                            </div>
+							<div class="form-group">
+                              <input name="pass" type="password" class="form-control" id="Password" placeholder="Password" required="">
+                            </div>
+							<div class="form-group">
+                               <input type="password" id="ConfirmPassword" class="form-control" placeholder="Re-type Password" name="confpassword" >
+            <div style="margin-top: 7px;" id="CheckPasswordMatch"></div>
+                            </div>
+										<p>&nbsp;</p>
+                                        <div class="input-group-append">
+                                           <!-- <button class="btn" type="button"><i class="ti-search"></i></button>-->
+                                        </div>
+                                    </div>
+                                </div>
+                              
+									
+									<button type="submit" name="btn" id="form-submit" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" onClick="return validate()">Register</button>
+									
+									
+                            </form>
+                        </aside>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="img/footer_logo.png" alt="">
+                                </a>
+                            </div>
+                            <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore.
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Services
+                            </h3>
+                            <ul class="links">
+                                <li><a href="#">Donate</a></li>
+                                <li><a href="#">Sponsor</a></li>
+                                <li><a href="#">Fundraise</a></li>
+                                <li><a href="#">Volunteer</a></li>
+                                <li><a href="#">Partner</a></li>
+                                <li><a href="#">Jobs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contacts
+                            </h3>
+                            <div class="contacts">
+                                <p>+2(305) 587-3407 <br>
+                                    info@loveuscharity.com <br>
+                                    Flat 20, Reynolds Neck, North
+                                    Helenaville, FV77 8WS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Top News
+                            </h3>
+                            <ul class="news_links">
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="img/news/news_1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>School for African 
+                                                Childrens</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="img/news/news_2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>School for African 
+                                                Childrens</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p>Animal Repellent<a href="https://colorlib.com" target="_blank"></a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+    <!-- JS here -->
+    <script src="../static/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="../static/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
+    <script src="../static/js/isotope.pkgd.min.js"></script>
+    <script src="../static/js/ajax-form.js"></script>
+    <script src="../static/js/waypoints.min.js"></script>
+    <script src="../static/js/jquery.counterup.min.js"></script>
+    <script src="../static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../static/js/scrollIt.js"></script>
+    <script src="../static/js/jquery.scrollUp.min.js"></script>
+    <script src="../static/js/wow.min.js"></script>
+    <script src="../static/js/nice-select.min.js"></script>
+    <script src="../static/js/jquery.slicknav.min.js"></script>
+    <script src="../static/js/jquery.magnific-popup.min.js"></script>
+    <script src="../static/js/plugins.js"></script>
+    <script src="../static/js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="../static/js/contact.js"></script>
+    <script src="../static/js/jquery.ajaxchimp.min.js"></script>
+    <script src="../static/js/jquery.form.js"></script>
+    <script src="../static/js/jquery.validate.min.js"></script>
+    <script src="../static/js/mail-script.js"></script>
+
+    <script src="../static/js/main.js"></script>
+    <script>
+        $('.datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-calendar"></span>'
+            }
+        });
+
+        $('.timepicker').timepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-clock-o"></span>'
+            }
+        });
+    $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+    </script>
+</body>
+</html>

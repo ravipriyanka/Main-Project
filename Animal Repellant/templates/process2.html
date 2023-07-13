@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Animal Repellent</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="../static/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/themify-icons.css">
+    <link rel="stylesheet" href="../static/css/nice-select.css">
+    <link rel="stylesheet" href="../static/css/flaticon.css">
+    <link rel="stylesheet" href="../static/css/gijgo.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" href="../static/css/slicknav.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+
+<body>
+
+{% if act2=="yes" %}
+
+			{% if st=="1" %}
+
+				<div align="center">
+				<img src="../static/dataset/{{fn}}" width="300" height="300">
+				</div>
+			<script>
+						setTimeout(function () {
+						   //Redirect with JavaScript
+						  window.location.href="/process2?st=2&fn={{fn}}&act2=yes";
+						}, 6000);
+						</script>
+			{% elif st=="2" %}
+				<div align="center">
+				<img src="../static/trained/{{fn2}}" width="250" height="250">
+				</div>
+				<h4 style="color:#FF3300">{{animal}} Detected</h4>
+			<embed src="../static/audio/{{afile}}" width="20" height="20" autostart="true"></embed>
+			<script>
+						setTimeout(function () {
+						   //Redirect with JavaScript
+						  window.location.href="/process2?st=3&act2=yes";
+						}, 10000);
+						</script>
+				
+			{% else %}		
+				<img src="../static/img/{{fn}}" width="300" height="300">
+			<script>
+						setTimeout(function () {
+						   //Redirect with JavaScript
+						  window.location.href="/process2?act2=yes";
+						}, 10000);
+						</script>
+			{% endif %}
+	<div align="center"><a href="/process2?act2=no" class="genric-btn success circle" style="background-color:#3CC78F">Stop</a></div>
+{% else %}
+	<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<div align="center"><a href="/process2?act2=yes" class="genric-btn success circle" style="background-color:#3CC78F">Start</a></div>
+{% endif %}
+</body>
+</html>
